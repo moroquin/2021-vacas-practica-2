@@ -2,7 +2,7 @@ package src.tienda;
 
 import java.util.*;
 
-public class ingreso_datos {
+public class IngresoDatos {
     static Scanner scanner = new Scanner(System.in);
 
     private static void imprimirMensaje(String mensaje){
