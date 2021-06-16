@@ -18,6 +18,7 @@ public class VectorClientes {
         else{
             clientes[(siguienteCodigo-1)] = new Cliente(siguienteCodigo, nombre, telefono);
         }
+        siguienteCodigo++;
     }
 
     public void agregarCliente(){
@@ -32,7 +33,7 @@ public class VectorClientes {
 
     public void mostrarClientes(){
         System.out.println("\n\n Clientes de memorabilia");
-        for (int i = 0; i < siguienteCodigo; i++) {
+        for (int i = 0; i < (siguienteCodigo-1); i++) {
             System.out.println("-"+i+") "+clientes[i].getInformacion());
             
         }

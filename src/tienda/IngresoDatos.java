@@ -6,7 +6,7 @@ public class IngresoDatos {
     static Scanner scanner = new Scanner(System.in);
 
     private static void imprimirMensaje(String mensaje){
-        System.out.print(mensaje);
+        System.out.print("\n"+mensaje+" ");
     }
 
     public static int getEntero(String mensaje, boolean negativo){
