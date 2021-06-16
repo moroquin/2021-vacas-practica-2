@@ -8,7 +8,7 @@ public class Principal {
         Principal p = new Principal();
     }
 
-    private VectorClientes vectorClientes = new VectorClientes();
+    private VectorClientes tablaClientes = new VectorClientes();
 
     public Principal(){
 
@@ -17,9 +17,19 @@ public class Principal {
         while(menu >= 0){
             System.out.println("Bienvenido a memorabilia \n\n");
             System.out.println("1) Ingreso de clientes");
+            System.out.println("2) Mostrar clientes");
             System.out.println("-1) Salir");
             System.out.println("\n");
             menu = IngresoDatos.getEntero("Ingrese la opción ", true);
+
+            if (menu == 1 ){
+                //ingreso de datos
+                tablaClientes.agregarCliente();
+            }
+            if (menu == 2){
+                //mostrar clientes
+                tablaClientes.mostrarClientes();
+            }
 
         }
 

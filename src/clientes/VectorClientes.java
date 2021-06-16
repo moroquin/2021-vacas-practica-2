@@ -26,7 +26,19 @@ public class VectorClientes {
         agregarCliente(nombre, telefono);
     }
 
+
+
     // fin agregar clientes
+
+    public void mostrarClientes(){
+        System.out.println("\n\n Clientes de memorabilia");
+        for (int i = 0; i < siguienteCodigo; i++) {
+            System.out.println("-"+i+") "+clientes[i].getInformacion());
+            
+        }
+
+        System.out.println("\n\n");
+    }
 
     
 }
