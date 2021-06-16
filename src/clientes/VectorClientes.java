@@ -44,14 +44,20 @@ public class VectorClientes {
 
 
     //Ordenamiento
-    public void ordenarPorNombre(){
+    public void ordenarPorNombre(boolean ascendente){
+        boolean cambio = true;
 
         for (int i = 1; i < (siguienteCodigo-1); i++) {
             for (int j = 0; j < (siguienteCodigo-1-i); j++) {
                 //  String.compareTo(String)
                 //   [-oo , + oo]
-                if(clientes[j].getNombre().compareTo(clientes[j+1].getNombre()) <0 ){
-                    //clientes i va antes que clientes j
+                if (ascendente)
+                    cambio= (clientes[j].getNombre().compareTo(clientes[j+1].getNombre()) > 0 );
+                else 
+                    cambio= (clientes[j].getNombre().compareTo(clientes[j+1].getNombre()) < 0 );
+
+                if(cambio ){
+                    //clientes i va antes que clientes j <0 descendente
                     Cliente aux = clientes[j];
                     clientes[j] = clientes[j+1];
                     clientes[j+1]= aux;
