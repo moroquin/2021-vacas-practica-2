@@ -35,11 +35,32 @@ public class VectorClientes {
         System.out.println("\n\n Clientes de memorabilia");
         for (int i = 0; i < (siguienteCodigo-1); i++) {
             System.out.println("-"+i+") "+clientes[i].getInformacion());
+            //System.out.println("-"+i+") "+clientes[i].getId() + " nombre "+clientes[i].getNombre()+ " telefono "+clientes[i].getTelefono());
             
         }
 
         System.out.println("\n\n");
     }
+
+
+    //Ordenamiento
+    public void ordenarPorNombre(){
+
+        for (int i = 1; i < (siguienteCodigo-1); i++) {
+            for (int j = 0; j < (siguienteCodigo-1-i); j++) {
+                //  String.compareTo(String)
+                //   [-oo , + oo]
+                if(clientes[j].getNombre().compareTo(clientes[j+1].getNombre()) <0 ){
+                    //clientes i va antes que clientes j
+                    Cliente aux = clientes[j];
+                    clientes[j] = clientes[j+1];
+                    clientes[j+1]= aux;
+                }
+            }
+        }
+
+    }
+
 
     
 }

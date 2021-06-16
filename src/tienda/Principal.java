@@ -18,6 +18,7 @@ public class Principal {
             System.out.println("Bienvenido a memorabilia \n\n");
             System.out.println("1) Ingreso de clientes");
             System.out.println("2) Mostrar clientes");
+            System.out.println("3) Ordenar Clientes");
             System.out.println("-1) Salir");
             System.out.println("\n");
             menu = IngresoDatos.getEntero("Ingrese la opción ", true);
@@ -28,6 +29,14 @@ public class Principal {
             }
             if (menu == 2){
                 //mostrar clientes
+                tablaClientes.mostrarClientes();
+            }
+            if (menu == 3){
+                //mostrar clientes
+                System.out.println("Desordenado:");
+                tablaClientes.mostrarClientes();
+                System.out.println("\n\nOrdenado:");
+                tablaClientes.ordenarPorNombre();
                 tablaClientes.mostrarClientes();
             }
 

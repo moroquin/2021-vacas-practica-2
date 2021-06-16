@@ -45,7 +45,8 @@ public class Cliente {
     //fin getters y setters
 
     public String getInformacion(){
-        return "Id: "+id+" Nombre del cliente: " + nombre;
+        String resultado = "Id: "+id+" Nombre del cliente: " + nombre;
+        return resultado;
     }
     
 }
